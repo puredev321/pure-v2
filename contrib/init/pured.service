@@ -1,0 +1,26 @@
+[Unit]
+Description=Pure's distributed currency daemon
+After=network.target
+
+[Service]
+User=pure
+Group=pure
+
+Type=forking
+PIDFile=/var/lib/pured/pured.pid
+
+ExecStart=/usr/bin/pured -daemon -pid=/var/lib/pured/pured.pid \
+          -conf=/etc/pure/pure.conf -datadir=/var/lib/pured
+
+ExecStop=-/usr/bin/pure-cli -conf=/etc/pure/pure.conf \
+         -datadir=/var/lib/pured stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

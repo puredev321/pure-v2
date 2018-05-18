@@ -1,0 +1,26 @@
+# /etc/conf.d/pured: config file for /etc/init.d/pured
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/pure/pure.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/pured"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/pured.pid"
+
+# Where to write pured data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/pured"
+
+# User and group to own pured process
+#BITCOIND_USER="pure"
+#BITCOIND_GROUP="pure"
+
+# Path to pured executable
+#BITCOIND_BIN="/usr/bin/pured"
+
+# Nice value to run pured under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pure
+Comment=Pure P2P Cryptocurrency
+Comment[fr]=Pure, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Pure, eşten eşe kriptografik sanal para birimi
+Exec=pure-qt %u
+Terminal=false
+Type=Application
+Icon=pure128
+MimeType=x-scheme-handler/pure;
+Categories=Office;Finance;
